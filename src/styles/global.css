@@ -2,12 +2,22 @@ html{
 	font-size: 100%;
 }
 
+h1, p {
+	margin-block-start:0;
+}
+
 .card {
     background: #000;
     color: white;
     width: 560px;
     margin: 0 auto;
+    padding: 3.125rem;
 }
+
+.card > *:last-child{
+	margin-block-end:0;
+}
+
 
 h1 {
     font-size: 3rem;
@@ -15,4 +25,32 @@ h1 {
 
 p {
     font-size: 1.125rem;
+}
+
+.links {
+	margin-block-start: 2.2em;
+}
+
+b{
+	background-color:aliceblue;
+	color:slategrey;
+	padding-inline: 1ch;
+	margin-inline: .5em;
+}
+.accent-color{
+	color: orange;
+}
+
+a{
+	font-family: sans-serif;
+	text-decoration: none;
+	color: orange;
+}
+a:focus{
+	background-color: brown;
+	padding-inline: .1em
+}
+a:hover,a:active{
+	text-decoration: underline;
+	
 }
