@@ -48,9 +48,16 @@ a{
 }
 a:focus{
 	background-color: brown;
-	padding-inline: .1em
 }
 a:hover,a:active{
 	text-decoration: underline;
-	
+}
+.btn {
+	display: inline-block;
+	padding: .5em 1em;
+	border-radius: .25em;
+	background-color: orange;
+	color: black;
+	cursor:pointer;
+	text-decoration:none;
 }
