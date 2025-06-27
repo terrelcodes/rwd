@@ -47,7 +47,7 @@ h2,a {
 
 a:hover,
 a:focus{
-	background-color: black;
+	filter: invert(68%);
 }
 .btn{
 	text-decoration: none;
