@@ -1,0 +1,66 @@
+:root{
+	--color-low: midnightblue;
+	--color-high: aliceblue;
+	--color-mid: orange;
+	font-family: "Source Sans 3", sans-serif;
+}
+
+html,
+body{
+	margin:0;
+	width:100%;
+	min-height:100vh;
+}
+
+.container{
+	max-inline-size: 60ch;
+	margin: 0 auto;
+}
+.container>*{
+	margin-block: 0;
+}
+.container>*+*{
+	margin-block-start: 1em;
+}
+
+.frame{
+	overflow: hidden;
+}
+.frame > * {
+	display: block;
+	width: 100%;
+}
+
+main > * {
+	margin: 0;
+	padding: 1.5rem;
+}
+
+.dark {
+	color: var(--color-high);
+	background: var(--color-low);
+}
+
+h2,a {
+	color: var(--color-mid);
+}
+
+a:hover,
+a:focus{
+	background-color: black;
+}
+.btn{
+	text-decoration: none;
+	padding: .25em 1em;
+	cursor: pointer;
+}
+.btn-accent{
+	color: var(--color-low);
+	background-color: var(--color-mid);
+}
+
+.btn-light{
+	color: var(--color-low);
+	background-color: var(--color-high);
+}
+
