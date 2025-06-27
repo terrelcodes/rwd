@@ -1,0 +1,110 @@
+/* reset */
+html,
+body{
+	margin:0;
+}
+
+/* theme */
+:root {
+	--color-bg: white;
+	--color-dark: #312614;
+       	--color-light: #b7832f;
+	--color-text: #707070;
+}
+
+body{
+	background-color: var(--color-bg);
+	color: var(--color-text);
+
+	font-family:"Source Sans 3",sans-serif;
+	font-size:1.125rem;
+}
+aside {
+	background-color: var(--color-dark);
+	color: var(--color-bg);
+	padding: 1rem;
+}
+h1{
+	font-size:3rem;
+	color: var(--color-dark);
+}
+h1 span{
+	color: var(--color-light);
+}
+h2{
+	font-size:1.5rem;
+}
+
+/* layout */
+.wrapper{
+	inline-size: 95%;
+	max-inline-size: 980px;
+	margin:0 auto;
+	padding-inline: .5rem;
+}
+
+main{
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+	  "sect-1"
+	  "sect-2"
+	  "aside-1"
+	  "sect-3"
+	  "aside-2";
+}
+@media (min-width: 600px){
+	main{
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas:
+		"sect-1 sect-1"
+		"sect-2 aside-1"
+		"sect-3 aside-2";
+	}
+}
+
+@media (min-width: 800px){
+	main{
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas:
+		"sect-1 sect-2 sect-2 aside-1"
+		"sect-3 sect-3 sect-3 aside-2";
+	}
+}
+
+
+.sect-1 {
+	grid-area: sect-1;
+}
+.sect-2 {
+	grid-area: sect-2;
+}
+.sect-3 {
+	grid-area: sect-3;
+}
+.aside-1 {
+	grid-area: aside-1;
+}
+.aside-2 {
+	grid-area: aside-2;
+}
+
+/* flow */
+section > *,
+aside > *{
+	margin: 0;
+}
+section > *+*,
+aside > *+*{
+	margin-block-start: 1em;
+}
+
+.frame{
+	overflow: hidden;
+}
+.frame > * {
+	display: block;
+	width:100%;
+}
+
